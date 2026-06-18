@@ -1,0 +1,21 @@
+name: YouTube Thumbnail — Bold & Clickable
+model: dall-e-3
+category: thumbnails
+
+prompt: >
+  YouTube thumbnail design, {subject} with {expression},
+  bold contrasting background in {color}, dramatic lighting,
+  high contrast, eye-catching composition, space for large
+  text on {side}, 16:9 aspect ratio, professional quality,
+  the kind of thumbnail that gets clicks
+
+settings:
+  size: "1792x1024"
+  quality: "hd"
+  style: "vivid"
+
+notes: >
+  YouTube thumbnails need to pop at small sizes.
+  Use vivid style for more contrast. Always leave space
+  for 2-4 word text overlay added in post-processing.
+  Final size should be 1280x720.
