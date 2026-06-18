@@ -1,0 +1,27 @@
+name: Smooth Gradient Background
+model: sdxl
+category: abstract
+
+prompt: >
+  smooth gradient background, transitioning from {color_1} to
+  {color_2}, soft bokeh light effects, ethereal atmosphere,
+  abstract, minimalist, clean, {mood} mood, 4K resolution
+
+negative: >
+  text, watermark, objects, people, harsh edges, noise,
+  banding, artifacts
+
+variables:
+  color_1: "starting color"
+  color_2: "ending color"
+  mood: "calm / energetic / professional / dreamy"
+
+settings:
+  steps: 25
+  cfg_scale: 6
+  sampler: "DPM++ 2M Karras"
+  size: "1024x1024"
+
+tips: >
+  Lower CFG scale (5-7) produces smoother gradients.
+  Use as backgrounds for text overlays or product composites.
