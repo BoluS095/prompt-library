@@ -1,0 +1,29 @@
+name: Floating Product Shot
+model: sdxl
+category: product
+
+prompt: >
+  {product} floating in mid-air, studio lighting, soft gradient
+  background {color}, professional product photography, 8K,
+  ultra detailed, commercial quality, soft shadows,
+  {style_modifier}
+
+negative: >
+  blurry, low quality, watermark, text, distorted,
+  oversaturated, amateur, deformed
+
+variables:
+  product: "your product description"
+  color: "#hex or color name"
+  style_modifier: "see modifiers/styles.md"
+
+settings:
+  steps: 30
+  cfg_scale: 7
+  sampler: "DPM++ 2M Karras"
+  size: "1024x1024"
+
+tips: >
+  Works best with simple product shapes. For complex products,
+  add more specific shape descriptions. Gradient backgrounds
+  work better than solid colors for this template.
