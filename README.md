@@ -1,5 +1,8 @@
 # 📚 Prompt Library
 
+[![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
+[![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](CONTRIBUTING.md)
+
 > Curated, battle-tested prompt templates for AI visual production.
 
 ## Why This Exists
@@ -23,68 +26,77 @@ Consistent quality in AI visual production requires consistent prompts. This lib
 prompt-library/
 ├── templates/
 │   ├── product/          # Product photography prompts
-│   ├── portrait/         # Portrait & headshot prompts
 │   ├── abstract/         # Abstract art & backgrounds
 │   ├── social/           # Social media graphics
 │   ├── ads/              # Ad creative prompts
 │   └── thumbnails/       # Video thumbnails & covers
 ├── modifiers/
-│   ├── styles.md         # Style modifier library
-│   ├── lighting.md       # Lighting modifiers
+│   ├── lighting.md       # Lighting modifier reference
 │   ├── cameras.md        # Camera & lens modifiers
-│   └── colors.md         # Color & mood modifiers
-├── negative/
-│   └── common.md         # Common negative prompts
-├── examples/             # Before/after examples
-└── README.md
+│   ├── styles.md         # Style & aesthetic modifiers
+│   └── colors.md         # Color palette modifiers
+└── negative/
+    └── common.md         # Common negative prompt patterns
 ```
 
-## Quick Example
+## Template Format
+
+Each template is a YAML file:
 
 ```yaml
-# templates/product/floating_product.yaml
-name: Floating Product Shot
-model: sdxl
-category: product
+# templates/product/hero_banner.yaml
+name: "Product Hero Banner"
+description: "Clean product shot for hero sections"
+models: [sdxl, dalle3]
 
-prompt: >
-  {product} floating in mid-air, studio lighting, soft gradient
-  background {color}, professional product photography, 8K,
-  ultra detailed, commercial quality, soft shadows,
-  {style_modifier}
+prompt: |
+  Professional product photography of {product}, centered composition,
+  clean white background, studio lighting, 8k, commercial photography,
+  sharp focus, {style_modifier}
 
-negative: >
-  blurry, low quality, watermark, text, distorted,
-  oversaturated, amateur
-
-variables:
+parameters:
   product: "your product description"
-  color: "#hex or color name"
-  style_modifier: "see modifiers/styles.md"
+  style_modifier: "modern minimalist"
 
-settings:
-  steps: 30
-  cfg_scale: 7
-  sampler: DPM++ 2M Karras
-  size: 1024x1024
+negative: "blurry, low quality, distorted, watermark, text"
+
+tips:
+  - Works best with simple, well-defined products
+  - Add brand colors via style_modifier for consistency
 ```
 
 ## Usage
 
-Each template includes:
-- ✅ Tested prompt with variable placeholders
-- ✅ Recommended negative prompt
-- ✅ Optimal generation settings per model
-- ✅ Example outputs (where possible)
-- ✅ Tips for customization
+Templates are designed to work with the [AI Visual Production Toolkit](https://github.com/BoluS095/ai-visual-production-toolkit):
+
+```python
+from src.intake.parser import load_template
+
+template = load_template("templates/product/hero_banner.yaml")
+prompt = template.render(product="wireless headphones", style_modifier="tech minimalist")
+```
+
+Or use standalone — just copy the prompt text and customize the `{variables}`.
+
+## Modifiers
+
+The `modifiers/` directory contains reference sheets for fine-tuning prompts:
+
+- **Lighting** — Studio, natural, dramatic, neon, golden hour, etc.
+- **Cameras** — Lens types, focal lengths, depth of field settings
+- **Styles** — Art movements, photography styles, aesthetics
+- **Colors** — Color theory, palette suggestions, mood mapping
 
 ## Contributing
 
-Found a great prompt? Submit a PR with:
-1. The prompt template in YAML format
-2. Which model(s) you tested it on
-3. Example output (if you can share)
+Have a prompt template that consistently produces great results? Contributions welcome!
+
+See [CONTRIBUTING.md](CONTRIBUTING.md) for guidelines.
 
 ## License
 
-MIT
+MIT License — see [LICENSE](LICENSE).
+
+## Author
+
+**Rafał Korzeniewski** — Python developer, trainer, and [PyWaw](https://pywaw.org) co-organizer.
