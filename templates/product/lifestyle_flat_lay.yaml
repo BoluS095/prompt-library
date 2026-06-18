@@ -1,0 +1,24 @@
+name: Lifestyle Flat Lay
+model: sdxl
+category: product
+
+prompt: >
+  flat lay photography, overhead view, {products} arranged neatly
+  on {surface}, lifestyle aesthetic, natural lighting from window,
+  {accent_items}, Instagram-worthy composition, editorial style,
+  high resolution, professional photography
+
+negative: >
+  blurry, low quality, watermark, cluttered, messy, dark,
+  distorted perspective, amateur
+
+variables:
+  products: "main products to feature"
+  surface: "marble table / wooden desk / linen cloth"
+  accent_items: "coffee cup, plant, notebook, etc."
+
+settings:
+  steps: 35
+  cfg_scale: 7.5
+  sampler: "DPM++ 2M Karras"
+  size: "1024x1024"
