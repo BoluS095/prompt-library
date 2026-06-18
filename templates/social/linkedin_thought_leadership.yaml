@@ -1,0 +1,19 @@
+name: LinkedIn Thought Leadership Graphic
+model: dall-e-3
+category: social
+
+prompt: >
+  Professional LinkedIn post graphic, abstract representation of
+  {concept}, corporate modern style, clean composition with space
+  for text overlay on {side}, subtle gradient background using
+  {colors}, sophisticated and authoritative feel, 1200x627 ratio
+
+settings:
+  size: "1792x1024"
+  quality: "hd"
+  style: "natural"
+
+notes: >
+  Leave clear space for text overlay. LinkedIn audiences respond
+  to clean, professional visuals. Avoid overly artistic or busy
+  compositions. Resize to 1200x627 in post-processing.
