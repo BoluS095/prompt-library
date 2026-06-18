@@ -1,0 +1,19 @@
+name: Product Hero Banner
+model: dall-e-3
+category: product
+
+prompt: >
+  Wide format hero banner for {brand}, featuring {product} as the
+  centerpiece, {background_description}, professional commercial
+  photography, dramatic lighting, brand colors {colors},
+  cinematic composition, wide angle, 21:9 aspect ratio feel
+
+settings:
+  size: "1792x1024"
+  quality: "hd"
+  style: "natural"
+
+notes: >
+  DALL-E 3 handles wide format and compositional instructions
+  better than SDXL for hero banners. For text overlays, leave
+  negative space on one side and add text in post-processing.
