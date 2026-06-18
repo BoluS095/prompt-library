@@ -1,0 +1,19 @@
+name: Instagram Post — Clean Product Feature
+model: dall-e-3
+category: social
+
+prompt: >
+  Professional social media post design, {product_description},
+  centered composition, clean {background_style} background,
+  modern minimalist aesthetic, Instagram square format,
+  brand colors {colors}, high-end commercial quality
+
+settings:
+  size: "1024x1024"
+  quality: "hd"
+  style: "natural"
+
+notes: >
+  DALL-E 3 works best for social posts because it handles
+  text and layout better than diffusion models. For posts
+  requiring text overlays, add specific text instructions.
