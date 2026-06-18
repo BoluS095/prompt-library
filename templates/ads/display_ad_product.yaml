@@ -1,0 +1,27 @@
+name: Display Ad — Product Focus
+model: dall-e-3
+category: ads
+
+prompt: >
+  Professional display advertisement, {product} prominently
+  featured, clean {background} background, brand colors {colors},
+  commercial advertising photography, studio lighting,
+  space for headline text on {text_position}, high-end quality,
+  {dimensions} aspect ratio
+
+settings:
+  size: "1024x1024"
+  quality: "hd"
+  style: "natural"
+
+variables:
+  product: "product description"
+  background: "white / gradient / lifestyle"
+  colors: "brand hex colors"
+  text_position: "top / bottom / left / right"
+  dimensions: "target ad dimensions"
+
+notes: >
+  Generate at 1024x1024 then crop/resize to standard IAB sizes:
+  300x250 (medium rectangle), 728x90 (leaderboard),
+  160x600 (wide skyscraper), 320x50 (mobile banner)
