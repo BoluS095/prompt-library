@@ -6,15 +6,15 @@ A compact collection of YAML prompt templates and Markdown reference sheets for 
 
 ## Current contents
 
-The repository currently contains **7 YAML templates**:
+The repository currently contains **8 YAML templates**:
 
 | Category | Templates |
 |---|---|
-| Product | Floating product, hero banner, lifestyle flat lay |
-| Abstract | Gradient background |
-| Ads | Product display ad |
-| Social | Instagram post, LinkedIn thought leadership |
-| Thumbnails | YouTube thumbnail |
+| Product | 3 — Floating product, hero banner, lifestyle flat lay |
+| Abstract | 1 — Gradient background |
+| Ads | 1 — Product display ad |
+| Social | 2 — Instagram post, LinkedIn thought leadership |
+| Thumbnails | 1 — YouTube thumbnail |
 
 It also includes four modifier references (lighting, cameras, styles, colours) and a common negative-prompt reference.
 
