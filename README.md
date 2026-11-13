@@ -1,102 +1,57 @@
-# 📚 Prompt Library
+# Prompt Library
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
-[![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](CONTRIBUTING.md)
 
-> Curated, battle-tested prompt templates for AI visual production.
+A compact collection of YAML prompt templates and Markdown reference sheets for AI-assisted visual work.
 
-## Why This Exists
+## Current contents
 
-Consistent quality in AI visual production requires consistent prompts. This library contains tested, categorized prompt templates that produce reliable results across different generative models.
+The repository currently contains **7 YAML templates**:
 
-## Categories
+| Category | Templates |
+|---|---|
+| Product | Floating product, hero banner, lifestyle flat lay |
+| Abstract | Gradient background |
+| Ads | Product display ad |
+| Social | Instagram post, LinkedIn thought leadership |
+| Thumbnails | YouTube thumbnail |
 
-| Category | Templates | Models Tested |
-|----------|-----------|---------------|
-| 🏢 Product Photography | 15+ | SDXL, DALL-E 3, Midjourney |
-| 👤 Portraits & Headshots | 10+ | SDXL, Midjourney |
-| 🎨 Abstract & Backgrounds | 20+ | SDXL, DALL-E 3 |
-| 📱 Social Media Graphics | 15+ | DALL-E 3, SDXL |
-| 🏷️ Ad Creatives | 10+ | DALL-E 3, SDXL |
-| 🎬 Thumbnails & Covers | 10+ | SDXL, Midjourney |
+It also includes four modifier references (lighting, cameras, styles, colours) and a common negative-prompt reference.
 
-## Structure
+## Maturity and evaluation
+
+This repository is a prompt reference library, not a benchmark. The templates have not been accompanied by a reproducible cross-model evaluation suite or measured quality results. Model names in individual files are compatibility suggestions, not evidence of comparative testing or guaranteed output quality.
+
+## How to use
+
+Open a YAML file, replace its placeholders with your product, brand, composition, and style details, then adapt the prompt for the image model you use.
+
+For example, `templates/product/hero_banner.yaml` includes placeholders for a brand, product, background description, and colour palette. Copy the prompt text into your chosen image-generation tool and replace those values.
+
+The files are intended to be usable independently. No Python package or runtime dependency is required to browse and adapt the templates.
+
+## Repository structure
 
 ```
-prompt-library/
-├── templates/
-│   ├── product/          # Product photography prompts
-│   ├── abstract/         # Abstract art & backgrounds
-│   ├── social/           # Social media graphics
-│   ├── ads/              # Ad creative prompts
-│   └── thumbnails/       # Video thumbnails & covers
-├── modifiers/
-│   ├── lighting.md       # Lighting modifier reference
-│   ├── cameras.md        # Camera & lens modifiers
-│   ├── styles.md         # Style & aesthetic modifiers
-│   └── colors.md         # Color palette modifiers
-└── negative/
-    └── common.md         # Common negative prompt patterns
+templates/
+  abstract/
+  ads/
+  product/
+  social/
+  thumbnails/
+modifiers/
+  cameras.md
+  colors.md
+  lighting.md
+  styles.md
+negative/
+  common.md
 ```
-
-## Template Format
-
-Each template is a YAML file:
-
-```yaml
-# templates/product/hero_banner.yaml
-name: "Product Hero Banner"
-description: "Clean product shot for hero sections"
-models: [sdxl, dalle3]
-
-prompt: |
-  Professional product photography of {product}, centered composition,
-  clean white background, studio lighting, 8k, commercial photography,
-  sharp focus, {style_modifier}
-
-parameters:
-  product: "your product description"
-  style_modifier: "modern minimalist"
-
-negative: "blurry, low quality, distorted, watermark, text"
-
-tips:
-  - Works best with simple, well-defined products
-  - Add brand colors via style_modifier for consistency
-```
-
-## Usage
-
-Templates are designed to work with the [AI Visual Production Toolkit](https://github.com/BoluS095/ai-visual-production-toolkit):
-
-```python
-from src.intake.parser import load_template
-
-template = load_template("templates/product/hero_banner.yaml")
-prompt = template.render(product="wireless headphones", style_modifier="tech minimalist")
-```
-
-Or use standalone — just copy the prompt text and customize the `{variables}`.
-
-## Modifiers
-
-The `modifiers/` directory contains reference sheets for fine-tuning prompts:
-
-- **Lighting** — Studio, natural, dramatic, neon, golden hour, etc.
-- **Cameras** — Lens types, focal lengths, depth of field settings
-- **Styles** — Art movements, photography styles, aesthetics
-- **Colors** — Color theory, palette suggestions, mood mapping
 
 ## Contributing
 
-Have a prompt template that consistently produces great results? Contributions welcome!
-
-See [CONTRIBUTING.md](CONTRIBUTING.md) for guidelines.
+Please include a concise use case, the intended category, all required variables, and any model-specific notes. Do not describe a template as tested unless reproducible evaluation evidence is included.
 
 ## License
 
-MIT License — see [LICENSE](LICENSE).
-
-## Author
-
-**Rafał Korzeniewski** — Python developer, trainer, and [PyWaw](https://pywaw.org) co-organizer.
+MIT. See [LICENSE](LICENSE).
