@@ -4,19 +4,31 @@ We welcome prompt template contributions! Here's how to submit yours.
 
 ## Adding a Template
 
-1. Create a YAML file in the appropriate `templates/` subcategory
-2. Follow the existing template format (see any `.yaml` file for reference)
-3. Test your prompt on at least 2 different models
-4. Include `tips` for best results
-5. Submit a Pull Request
+1. Create a YAML file in the appropriate `templates/` subcategory.
+2. Follow the existing template format.
+3. Document every `{placeholder}` used in the prompt under `variables`.
+4. Include practical `tips` or `notes` for best results.
+5. If you have tested a prompt on specific models, record the model and method; do not imply testing that was not performed.
+6. Submit a focused Pull Request.
 
-## Template Quality Criteria
+## Automated validation
 
-- **Consistency** — Should produce reliable results across multiple generations
-- **Clarity** — Variables should be clearly named and documented
-- **Versatility** — Should work across at least 2 supported models
-- **Tested** — Include which models you've tested with
+Install the validator dependency and run:
 
-## Modifier Contributions
+```bash
+python -m pip install pyyaml
+python scripts/validate_templates.py
+python -m unittest discover -s tests -v
+```
+
+The validator checks YAML structure, required fields, category-directory consistency, documented prompt placeholders, and practical notes. It does not measure image quality or prove cross-model compatibility.
+
+## Template quality criteria
+
+- **Consistency** — explain expected use and known limitations.
+- **Clarity** — variables should be clearly named and documented.
+- **Evidence** — distinguish tested behavior from suggestions or assumptions.
+
+## Modifier contributions
 
 For new modifiers, add to the relevant `.md` file in `modifiers/` with examples.

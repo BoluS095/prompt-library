@@ -22,3 +22,8 @@ settings:
   cfg_scale: 7.5
   sampler: "DPM++ 2M Karras"
   size: "1024x1024"
+
+
+tips: >
+  Keep the number of products and props limited so the main items remain
+  readable. Check the generated layout before adding typography in post.

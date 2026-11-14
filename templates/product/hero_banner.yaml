@@ -8,6 +8,12 @@ prompt: >
   photography, dramatic lighting, brand colors {colors},
   cinematic composition, wide angle, 21:9 aspect ratio feel
 
+variables:
+  brand: "brand or campaign name"
+  product: "product description and key visual features"
+  background_description: "scene, environment, or background treatment"
+  colors: "brand colors or hex values"
+
 settings:
   size: "1792x1024"
   quality: "hd"

@@ -8,12 +8,16 @@ prompt: >
   modern minimalist aesthetic, Instagram square format,
   brand colors {colors}, high-end commercial quality
 
+variables:
+  product_description: "product and the main message to communicate"
+  background_style: "plain, gradient, studio, or lifestyle treatment"
+  colors: "brand colors or hex values"
+
 settings:
   size: "1024x1024"
   quality: "hd"
   style: "natural"
 
 notes: >
-  DALL-E 3 works best for social posts because it handles
-  text and layout better than diffusion models. For posts
-  requiring text overlays, add specific text instructions.
+  Use the image as a visual base. Add final typography and precise
+  brand copy in a design tool rather than relying on generated text.
