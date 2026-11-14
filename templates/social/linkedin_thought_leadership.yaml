@@ -8,12 +8,16 @@ prompt: >
   for text overlay on {side}, subtle gradient background using
   {colors}, sophisticated and authoritative feel, 1200x627 ratio
 
+variables:
+  concept: "the idea, trend, or subject to visualize"
+  side: "left or right side reserved for text"
+  colors: "brand colors or hex values"
+
 settings:
   size: "1792x1024"
   quality: "hd"
   style: "natural"
 
 notes: >
-  Leave clear space for text overlay. LinkedIn audiences respond
-  to clean, professional visuals. Avoid overly artistic or busy
-  compositions. Resize to 1200x627 in post-processing.
+  Leave clear space for text overlay. Avoid overly busy compositions.
+  Resize to 1200x627 in post-processing and add final copy separately.
