@@ -9,6 +9,12 @@ prompt: >
   text on {side}, 16:9 aspect ratio, professional quality,
   the kind of thumbnail that gets clicks
 
+variables:
+  subject: "person, product, or topic to feature"
+  expression: "facial expression or visual mood"
+  color: "dominant background color or hex value"
+  side: "left or right side reserved for text"
+
 settings:
   size: "1792x1024"
   quality: "hd"
